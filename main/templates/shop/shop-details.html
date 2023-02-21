@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+Snitch | Описание 
+{% endblock title %}
+
+
+{% block container %}
+<div class="container">
+  <div class="text-center">
+    <div class="col">
+      <div class="card mb-4 rounded-3 shadow-sm">
+        <div class="card-header py-3">
+          <h4 class="my-0 fw-normal">{{ product.name}}</h4>
+        </div>
+        <div class="card-body">
+          <h1 class="card-title pricing-card-title">{{ product.price }} ₽</h1>
+          <ul class="list-unstyled mt-3 mb-4">
+            <a href="{% url 'shop_detail' product.pk %}"><img src="{{product.image_url}}" class="" alt="..." width="256px"></a><p></p>
+            {{ product.note }}<br> 
+          </ul>
+          <form method="post" action="{% url 'add_item_to_cart' product.pk %}">
+            {% csrf_token %}
+            <label class="form-label" for="id_quantity">Количество:</label>
+            <input type="number" name="quantity" value="1" min ="1" required id="id_quantity" class="mb-4">
+            <a href=""><button type="submit" class="w-100 btn btn-lg btn-primary">Добавить в корзину</button></a>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock container %}
+
+

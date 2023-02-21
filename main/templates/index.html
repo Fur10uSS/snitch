@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+	Snitch | Главная
+{% endblock title %}
+
+
+{% block container %}
+        <div class="p-4 p-md-5 mb-4 text-white rounded bg-dark">
+          <div class="col-md-6 px-0">
+            <h1 class="display-4 fst-italic">МЫ — КОМПАНИЯ «SNITCH»!</h1>
+            <p class="lead my-3">
+              Мы молодая компания по веб-дизайну. У нас много идей, много
+              способов их реализации! Выбрав нас вы доверяете создание дизайна профи! Ваш заказ будет выполнен идеально, и так как того хотите вы сами!
+            </p>
+            <div class="bor-md-3">
+              <button
+                type="button"
+                class="btn btn-outline-warning rounded-pill"
+              >
+                Пожертвовать
+              </button>
+              <button
+                type="button"
+                class="btn btn-outline-warning me-2 rounded-pill"
+              >
+                Что-то еще
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col text-center text-center">
+            <img
+              src="{% static 'images/editors/1.jpg' %}"
+              alt=""
+              width="100%"
+              class="rounded-circle"
+            />
+
+            <h1>Баштаник Назар</h1>
+            <p>
+              Наш главный кодер. "Если что-то не нравится, садись и пиши сам" -
+              это его основная фраза в работе.
+            </p>
+          </div>
+
+          <div class="col text-center">
+            <img
+              src="{% static 'images/editors/2.jpg' %}"
+              alt=""
+              width="100%"
+              class="rounded-circle"
+            />
+            <h1>Короченко Даниил</h1>
+            <p>
+              Это наш второй кодер. Долгое время болел, поэтому стал вторым
+              нашим кодером. Не многословен, может в любой момент послать тебя
+              куда подальше.
+            </p>
+          </div>
+
+          <div class="col text-center">
+            <img
+              src="{% static 'images/editors/3.jpg' %}"
+              alt=""
+              width="100%"
+              class="rounded-circle"
+            />
+            <h1>Алсаев Евгений</h1>
+            <p>
+              Это один из наших дизайнеров. Довольно быстро осваивает незнакомые
+              программы. Ценнейший сотрудник нашей группы. Молчалив, но мнение
+              свое имеет!
+            </p>
+          </div>
+          <div class="col text-center text-center">
+            <img
+              src="{% static 'images/editors/4.jpg' %}"
+              alt=""
+              width="100%"
+              class="rounded-circle"
+            />
+            <h1>Файзулин Ростислав</h1>
+            <p>
+              Второй наш дизайнер. Туповат, глуповат, но если что может
+              подсобить. После 5-6 часов работы начинает ехать крыша.
+            </p>
+          </div>
+        </div>
+{% endblock container %}
+
